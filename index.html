@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JV | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="hero">
+    <div class="waves"></div>
+
+    <h1 class="glitch" data-text="🐸 Jose Victor Siong">
+        🐸 Jose Victor Siong
+    </h1>
+
+    <p class="shimmer typing">
+        IT Student • Web, Java & C Developer
+    </p>
+</header>
+
+<div class="hero-actions">
+  <a href="resume.pdf" class="btn secondary">Download CV</a>
+</div>
+
+
+<main class="grid">
+
+    <section class="card about">
+        <h2>About Me</h2>
+        <p>
+            I’m a second-year IT student focused on building practical web and software systems that balance
+            clean logic, modern UI, and real-world usability.
+        </p>
+    </section>
+
+    <section class="card projects">
+        <h2>Projects</h2>
+
+    <div class="card project-card"
+     data-title="Froglabs Inc."
+     data-desc="Dynamic e-commerce web app with cart, checkout, authentication, and admin panel."
+     data-tech="HTML, CSS, JavaScript, PHP, MySQL"
+     data-link="https://github.com/Lemon-frog/Froglabs-Inc./blob/main/README.md">
+
+    <h3>🐸 Froglabs Inc.</h3>
+    <p>Dynamic e-commerce web app</p>
+    </div>
+
+
+    <div class="card project-card"
+     data-title="Bogart-Bites"
+     data-desc="Restaurant ordering system built with PHP and MySQL."
+     data-tech="CSS, JavaScript, PHP, MySQL"
+     data-link="https://github.com/Lemon-frog/Bogart-Bites/blob/main/README.md">
+
+    <h3>🍔 Bogart Bites</h3>
+    <p>Dynamic restaurant ordering system</p>
+    </div>
+
+
+    <div class="card project-card"
+     data-title="Rock-Paper-Scissors + Fire"
+     data-desc="Java Swing game extending the classic Rock-Paper-Scissors."
+     data-tech="Java"
+     data-link="https://github.com/Lemon-frog/Rock-Paper-Scissors-Fire./blob/main/README.md">
+
+    <h3>🪨📄✂️🔥 Rock-Paper-Scissors + Fire</h3>
+    <p>Java Swing game extending the classic Rock-Paper-Scissors.</p>
+    </div>
+    </section>
+
+
+    <section class="card skills">
+        <h2>Languages</h2>
+        <ul>
+            <li>HTML, CSS, JavaScript</li>
+            <li>PHP & MySQL</li>
+            <li>Java & C</li>
+        </ul>
+        <br>
+        <h2>Tools</h2>
+        <ul>
+            <li>Git & GitHub</li>
+            <li>VS Code</li>
+            <li>Apache Netbeans & Dev-C++ IDE</li>
+            <li>Xampp</li>
+            <li>Git & GitHub</li>
+        </ul>
+    </section>
+
+    <section class="card contact">
+        <h2>Contact</h2>
+        <p>Email: josevictorsiong96@email.com</p>
+        <p>GitHub: github.com/Lemon-frog</p>
+    </section>
+
+</main>
+
+<footer>
+    © 2025 Jose Victor Siong
+</footer>
+
+<div class="modal-overlay" id="projectModal">
+  <div class="modal">
+    <button class="modal-close">&times;</button>
+
+    <h2 id="modalTitle"></h2>
+    <p id="modalDesc"></p>
+  </div>
+
+  <script src="script.js"></script>
+
+</div>
+</body>
+</html>
