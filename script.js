@@ -70,3 +70,28 @@ projectCards.forEach(card => {
   }
 
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const text = "IT Student • Web, Java & C Developer";
+  const target = document.getElementById("typed-subtitle");
+  const cursor = document.querySelector(".cursor");
+
+  let index = 0;
+  const speed = 55;
+
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    target.textContent = text;
+    cursor.style.display = "none";
+    return;
+  }
+
+  function type() {
+    if (index < text.length) {
+      target.textContent += text.charAt(index);
+      index++;
+      setTimeout(type, speed);
+    }
+  }
+
+  type();
+});
