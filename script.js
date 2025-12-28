@@ -95,3 +95,47 @@ document.addEventListener("DOMContentLoaded", () => {
 
   type();
 });
+
+const projectCards = document.querySelectorAll(".project-card");
+const modal = document.getElementById("projectModal");
+const modalTitle = modal.querySelector(".modal-title");
+const modalDesc = modal.querySelector(".modal-description");
+const modalLink = modal.querySelector(".modal-link");
+
+projectCards.forEach(card => {
+  card.addEventListener("click", () => {
+    // 1. Extract data from the card's data attributes
+    const title = card.getAttribute("data-title");
+    const desc = card.getAttribute("data-desc");
+    const link = card.getAttribute("data-link");
+
+    // 2. Fill the modal with this content
+    modalTitle.textContent = title;
+    modalDesc.textContent = desc;
+    modalLink.href = link;
+
+    // 3. Show the modal
+    modal.classList.add("active");
+  });
+});
+
+// Close modal logic (add this if not present)
+document.querySelector(".modal-close").addEventListener("click", () => {
+  modal.classList.remove("active");
+});
+
+const filterButtons = document.querySelectorAll('.filter-btn');
+
+filterButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const filter = btn.getAttribute('data-filter');
+    
+    projectCards.forEach(card => {
+      if (filter === 'all' || card.getAttribute('data-category') === filter) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  });
+});
