@@ -265,7 +265,7 @@ footer { text-align: center; padding: 1.5rem; color: var(--muted); }
 }
 
 /* Mobile adjustments */
-@media (max-width: 768px) {
+@media (max-width: 500px) {
     .filter-controls {
         flex-wrap: wrap;
         gap: 0.5rem;
@@ -278,3 +278,4 @@ footer { text-align: center; padding: 1.5rem; color: var(--muted); }
         text-align: center;
     }
 }
+
